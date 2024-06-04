@@ -154,14 +154,26 @@ img {
 
 .header {
     display: flex;
+    position: relative;
+    padding-top: 28px;
+    padding-bottom: 28px;
 }
 
-.header .menu {
+.header img {
+    position: absolute;
+    left: 16.25%;
+}
+.navigator-header {
+    display: flex;
+    margin:  0 auto;
+}
+.navigator-header .menu {
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
 }
+
 
 .banner {
     background: rgba(250, 250, 250, 1);
@@ -173,17 +185,43 @@ img {
 
 .upper-banner {
     max-width: 670px;
+    height: 192px;
+    position: relative;
 }
 
-.slogan h1 {
+.upper-banner .box1 {
+    position: absolute;
+    top:0;
+    left: 0;;
+}
+
+.box2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.box3 {
+    position: absolute;
+}
+
+.box4 {
+    position: absolute;
+}
+
+.upper-banner .slogan {
     font-size: 24px;
     text-align: center;
+    margin: 0 auto;
+    height: auto;
 }
 
 .bottom-banner {
     display: flex;
     justify-content: space-between;
     max-width: 636px;
+    margin-bottom: 80px;
+    margin-top: 24px;
 }
 
 .bottom-banner .item {
@@ -199,20 +237,71 @@ img {
     color: rgba(59, 59, 59, 1);
 }
 
+.content {
+    max-width: 1296px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.card-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: -2px;
+}
+.card img {
+    border-radius:2%;
+}
+.card {
+    width: (50% - 12px);
+    margin-bottom: 80px;
+}
+
+.card h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(59, 59, 59, 1);
+    margin-bottom: 8px;
+}
+.card p {
+    color: rgba(145, 145, 145, 1);
+    margin-bottom: 24px;
+}
+.card a{
+    background: rgba(241, 241, 241, 1);
+    text-decoration: none;
+    color: rgba(59, 59, 59, 1);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
 .navigator ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    width: 152px;
 }
 
 .pages a {
     text-decoration: none;
-    color: black
+    color: rgba(59, 59, 59, 1);
+    font-size: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.pages a:hover{
+    background: black;
+    color: aliceblue;
+    border-radius: 15%;
 }
 
 .footer {
     display: flex;
-
     position: relative;
 }
 
@@ -221,14 +310,8 @@ img {
     z-index: 1;
 }
 
-.footer-left {
+.footer-content {
     position: absolute;
     z-index: 2;
-    max-width: 686px;
-}
-
-.footer-right {
-    position: absolute;
-    z-index: 2;
-    max-width: 306px;
+    margin: 0 auto;
 }
