@@ -146,6 +146,10 @@ img {
     height: auto;
 }
 
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
 .container {
     max-width: 1920px;
     margin: 0 auto;
@@ -153,68 +157,91 @@ img {
 }
 
 .header {
+    width: 100%;
     display: flex;
-    position: relative;
+    align-items: center;
     padding-top: 28px;
     padding-bottom: 28px;
 }
+.header h1 a{
+    background-image: url(images/logo.svg);
+    width: 90px;
+    height: 40px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
 
-.header img {
-    position: absolute;
-    left: 16.25%;
-}
-.navigator-header {
+.menu {
     display: flex;
-    margin:  0 auto;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 480px;
 }
-.navigator-header .menu {
+.menu a {
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
+    color: black;
+    text-decoration: none;
 }
-
-
+.menu a:hover{
+    font-weight:600 ;
+    border: solid 2px gray;
+    border-style: outset;
+}
 .banner {
     background: rgba(250, 250, 250, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
-
-.upper-banner {
-    max-width: 670px;
+.qoute {
+    width: 670px;
     height: 192px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.upper-banner .box1 {
+.qoute h1::before{
+    content: '';
+    width: 72px;
+    height: 72px;
+    background-image: url(images/quote-right.png);
     position: absolute;
-    top:0;
-    left: 0;;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 
-.box2 {
+.qoute h1::after {
+    content: '';
+    width: 72px;
+    height: 72px;
+    background-image: url(images/quote-right.png);
     position: absolute;
-    bottom: 0;
-    right: 0;
+    right: 0px;
+    bottom: 0px;
+    box-sizing: border-box;
 }
-
-.box3 {
-    position: absolute;
-}
-
-.box4 {
-    position: absolute;
-}
-
-.upper-banner .slogan {
+.qoute h1 {
     font-size: 24px;
     text-align: center;
-    margin: 0 auto;
-    height: auto;
 }
+.mark {
+    position: relative;
+}
+.mark img{
+    position: absolute;
+    bottom: 0px;
+    right: -16px;
+} 
 
 .bottom-banner {
     display: flex;
@@ -231,6 +258,11 @@ img {
 
 .bottom-banner .item h2 {
     color: rgba(91, 91, 91, 1);
+    
+}
+.border-bottom{
+    border-bottom: solid 2px gray;
+    border
 }
 
 .bottom-banner .item p {
@@ -277,6 +309,7 @@ img {
     padding-bottom: 4px;
     padding-left: 12px;
     padding-right: 12px;
+    border-radius: 15px;
 }
 .navigator ul {
     display: flex;
@@ -301,17 +334,67 @@ img {
 }
 
 .footer {
+    background-image: url(images/footer-bg-lg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.footer-content{
     display: flex;
-    position: relative;
-}
-
-.footer img {
-    position: absolute;
-    z-index: 1;
-}
-
-.footer-content {
-    position: absolute;
-    z-index: 2;
+    width: 67.5%;
+    justify-content: space-between;
     margin: 0 auto;
+}
+.footer-left{
+    display: flex;
+    flex-direction: column;
+
+}
+.footer-left img{
+    width: 120px;
+    height: 54px;
+}
+.footer-left p{
+    font-size: 20px;
+    margin: 24px 0;
+}
+.footer-left a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(145, 145, 145, 1);
+}
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+.contact-list li{
+    display: flex;
+    
+}
+.form-link{
+    width: 306px;
+    padding: 8px 24px;
+    border: dotted 1px rgba(193, 193, 193, 1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 1);
+    color: aliceblue;
+}
+.social-media{
+    background: rgba(255, 255, 255, 1);
+    color: rgba(59, 59, 59, 1);
+    width: 306px;
+    padding: 8px 24px;
+    border: dotted 1px rgba(193, 193, 193, 1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contact-list p{
+    font-size: 20px;
 }
