@@ -159,7 +159,8 @@ img {
 }
 
 .header {
-    width: 100%;
+    width: 1296px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     padding-top: 28px;
@@ -314,6 +315,7 @@ img {
     font-weight: 700;
     color: rgba(59, 59, 59, 1);
     margin-bottom: 8px;
+    margin-top: 16px;
 }
 
 .card p {
@@ -408,7 +410,7 @@ img {
 
 }
 
-.form-link {
+.form-link a {
     width: 306px;
     padding: 8px 24px;
     border: dotted 1px rgba(193, 193, 193, 1);
@@ -420,7 +422,7 @@ img {
     color: aliceblue;
 }
 
-.social-media {
+.social-media a {
     background: rgba(255, 255, 255, 1);
     color: rgba(59, 59, 59, 1);
     width: 306px;
@@ -432,6 +434,7 @@ img {
     gap: 8px;
 }
 
-.contact-list p {
+.contact-list a {
     font-size: 20px;
+    text-decoration: none;
 }
